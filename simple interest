@@ -1,0 +1,5 @@
+p=int(input("enter the principal amount P:"))
+r=int(input(" Rate of interest R:"))
+t=int(input(" Time period T:"))
+si=(p*r*t)/100
+print("the simple interest",si)
