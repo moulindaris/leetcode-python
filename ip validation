@@ -1,0 +1,14 @@
+def validate_ip(ip):
+    parts = ip.split('.')
+    if len(parts) != 4:
+        return False
+    for part in parts:
+        if not part.isdigit():
+            return False
+        if len(part) > 1 and part[0] == '0':
+            return False
+        if not (0 <= int(part) <= 255):
+            return False
+    return True
+user_ip = input("Enter an IP address: ")
+print(f"Is valid: {validate_ip(user_ip)}")
