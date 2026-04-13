@@ -1,0 +1,5 @@
+t = int(input("Value of T: "))
+d_total = int(input("Value of D_total: "))
+w = (d_total - t) // 7
+d = t - w
+print(f"W:{w},D:{d}")
