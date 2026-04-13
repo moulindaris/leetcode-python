@@ -1,0 +1,5 @@
+t = int(input("Value of T: "))
+m_total = int(input("Value of M_total: "))
+h = (m_total - (2 * t)) // 59
+m = t - h
+print(f"H = {h}, M = {m}")
