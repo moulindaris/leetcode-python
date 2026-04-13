@@ -1,0 +1,3 @@
+y=int(input("Enter a year: "))
+s= "leap year " if (y % 4 == 0 and y % 100 != 0) or (y % 400 == 0) else "it  is not leap year"
+print(s)
