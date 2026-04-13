@@ -1,0 +1,27 @@
+import sys
+data = sys.stdin.read().split()
+
+if data:
+    t = int(data[0])
+    current = 1
+    for _ in range(t):
+        x = int(data[current])
+        s = data[current + 1]
+        # Count outcomes
+        c_wins = s.count('C')
+        n_wins = s.count('N')
+        draws = s.count('D')
+        # Points: Win = 2, Draw = 1
+        chandru_pts = (c_wins * 2) + draws
+        nirmal_pts = (n_wins * 2) + draws
+        # Determine prize
+        if chandru_pts > nirmal_pts:
+            print(60 * x)
+        elif nirmal_pts > chandru_pts:
+            print(40 * x)
+        else:
+            # Tie: Chandru wins as defending champion
+            print(55 * x)
+
+        # Move index forward by 2 for the next test case (X and S)
+        current += 2
