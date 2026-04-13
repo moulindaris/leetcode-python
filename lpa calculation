@@ -1,0 +1,12 @@
+salary = float(input("Enter your annual salary in LPA (Lakhs Per Annum): "))
+
+if salary <= 2.5:
+    tax_amount = 0
+elif salary <= 5:
+    tax_amount = (salary - 2.5) * 0.05
+elif salary <= 10:
+    tax_amount = (2.5 * 0.05) + (salary - 5) * 0.10
+else:
+    tax_amount = (2.5 * 0.05) + (5 * 0.10) + (salary - 10) * 0.15
+
+print(f"Your calculated tax amount is: {tax_amount} LPA")
