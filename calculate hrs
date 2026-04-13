@@ -1,0 +1,9 @@
+
+def calculate_hours():
+
+    t = int(input("Enter Value of T: "))
+    h_total = int(input("Enter Value of H_total: "))
+    d = (h_total - (18 * t)) // 6
+    h = t - d
+    print(f"D = {d}, H = {h}")
+calculate_hours()
