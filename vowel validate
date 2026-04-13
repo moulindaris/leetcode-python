@@ -1,0 +1,3 @@
+ch = input("Enter a character: ")
+d= "vowel"   if ch in  ('a', 'e', 'i', 'o', 'u') else "consonant"
+print(d)
