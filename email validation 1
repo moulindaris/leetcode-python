@@ -1,0 +1,15 @@
+def validate_email(email):
+    if email.count('@') != 1:
+        return False
+    username, domain = email.split('@')
+    if not username or not domain:
+        return False
+    if '.' not in domain or domain.startswith('.') or domain.endswith('.'):
+        return False
+    allowed_chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789._-"
+    for char in email:
+        if char not in allowed_chars and char != '@':
+            return False
+    return True
+uemail = input("Enter a valid email: ")
+print(f"Is valid: {validate_email(uemail)}")
