@@ -1,0 +1,11 @@
+def verify_user(email, password):
+    if email in user_database:
+        if user_database[email] == password:
+            return True
+    return False
+email_input = input("Enter Email: ")
+password_input = input("Enter Password: ")
+if verify_user(email_input, password_input):
+    print("Verification Successful!")
+else:
+    print("Verification Failed!")
