@@ -1,0 +1,22 @@
+def solve_logistics_duration():
+   try:
+      T = int(input("Enter T: "))
+      D_total = int(input("Enter D_total: "))
+   except ValueError:
+      print("INVALID INPUT")
+      return
+   if not (D_total >= 7 and D_total % 1 == 0 and T < D_total):
+      print("INVALID INPUT")
+      return
+
+   numerator = D_total - T
+   if numerator % 6 == 0:
+      W = numerator // 6
+      D = T - W
+      if D >= 0:
+         print(f"W = {W}, D = {D}")
+      else:
+         print("INVALID INPUT")
+   else:
+      print("INVALID INPUT")
+solve_logistics_duration()
