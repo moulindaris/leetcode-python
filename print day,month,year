@@ -1,0 +1,7 @@
+import datetime
+def find_day(dd, mm, yyyy):
+    date_obj = datetime.date(yyyy, mm, dd)
+    day_name = date_obj.strftime("%A").upper()
+    return day_name
+day, month, year = map(int, input().split())
+print(find_day(day, month, year))
